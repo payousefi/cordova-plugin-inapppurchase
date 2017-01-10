@@ -38,6 +38,8 @@
                                  @"title": NILABLE(product.localizedTitle),
                                  @"description": NILABLE(product.localizedDescription),
                                  @"price": NILABLE([RMStore localizedPriceOfProduct:product]),
+                                 @"currencyCode": NILABLE(product.priceLocale.currencyCode),
+                                 @"decimalPrice": NILABLE([product.price stringValue]),
                               }];
     }
     [result setObject:validProducts forKey:@"products"];
